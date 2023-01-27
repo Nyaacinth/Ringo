@@ -1,3 +1,4 @@
+import SUID from "@suid/vite-plugin"
 import UnoCSS from "unocss/vite"
 import Checker from "vite-plugin-checker"
 import Solid from "vite-plugin-solid"
@@ -16,6 +17,7 @@ export default defineConfig({
     },
     plugins: [
         Solid(),
+        SUID(),
         UnoCSS(),
         Checker({
             typescript: { tsconfigPath: "tsconfig.json" }
