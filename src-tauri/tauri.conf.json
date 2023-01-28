@@ -13,10 +13,13 @@
         "windows": [
             {
                 "title": "Ringo",
-                "width": 816,
-                "height": 624,
+                "width": 300,
+                "minWidth": 300,
+                "height": 500,
+                "minHeight": 500,
                 "resizable": true,
-                "fullscreen": false
+                "fullscreen": false,
+                "titleBarStyle": "Overlay"
             }
         ],
         "allowlist": {
