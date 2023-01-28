@@ -1,7 +1,7 @@
 import { Route, Router, Routes } from "@solidjs/router"
 import { Box } from "@suid/material"
 import { Component } from "solid-js"
-import { PitchCard } from "./pages/Home"
+import { PitchCard } from "./pages/PitchCard"
 
 export const MainApp: Component = () => {
     return (
