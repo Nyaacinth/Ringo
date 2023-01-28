@@ -1,12 +1,13 @@
-import { Button } from "@suid/material"
-import { Component, createSignal } from "solid-js"
+import { Route, Router, Routes } from "@solidjs/router"
+import { Component } from "solid-js"
+import { Home } from "./pages/Home"
 
 export const MainApp: Component = () => {
-    const [count, setCount] = createSignal(0)
-
     return (
-        <Button variant="contained" onClick={() => setCount((count) => count + 1)}>
-            Count: {count()}
-        </Button>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
+        </Router>
     )
 }
