@@ -19,11 +19,11 @@ export function createCurrentPitchFreq(delay: number, hold: false): Accessor<num
 export function createCurrentPitchFreq(delay: number, hold: boolean) {
     const [pitch, setPitch] = createSignal<number | null>(261.626)
 
-    let intervalId: number | undefined
-    let mediaStreamSource: MediaStreamAudioSourceNode | undefined
-    let mediaStream: MediaStream | undefined
-
     createEffect(() => {
+        let intervalId: number | undefined
+        let mediaStreamSource: MediaStreamAudioSourceNode | undefined
+        let mediaStream: MediaStream | undefined
+
         navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
             mediaStream = stream
             const audioContext = new AudioContext()
@@ -44,12 +44,12 @@ export function createCurrentPitchFreq(delay: number, hold: boolean) {
                 }
             }, delay)
         })
-    })
 
-    onCleanup(() => {
-        if (intervalId) clearInterval(intervalId)
-        if (mediaStreamSource) mediaStreamSource.disconnect()
-        if (mediaStream) mediaStream.getTracks().forEach((track) => track.stop())
+        onCleanup(() => {
+            if (intervalId) clearInterval(intervalId)
+            if (mediaStreamSource) mediaStreamSource.disconnect()
+            if (mediaStream) mediaStream.getTracks().forEach((track) => track.stop())
+        })
     })
 
     return pitch
