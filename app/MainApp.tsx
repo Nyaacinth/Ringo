@@ -2,6 +2,7 @@ import { Route, Router, Routes } from "@solidjs/router"
 import { Box } from "@suid/material"
 import { Component } from "solid-js"
 import { PitchCard } from "./pages/PitchCard"
+import { PitchGraph } from "./pages/PitchGraph"
 
 export const MainApp: Component = () => {
     return (
@@ -13,6 +14,7 @@ export const MainApp: Component = () => {
             >
                 <Routes>
                     <Route path="/" element={<PitchCard />} />
+                    <Route path="/pitchGraph" element={<PitchGraph />} />
                 </Routes>
             </Box>
         </Router>
