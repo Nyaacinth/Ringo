@@ -10,7 +10,6 @@ export const MainApp: Component = () => {
             <Box
                 class="flex-1 justify-center items-center"
                 sx={{ background: "repeating-linear-gradient(45deg, #66CCFF, #66CCFF 10px, #87D4FF 0, #87D4FF 20px)" }}
-                data-tauri-drag-region
             >
                 <Routes>
                     <Route path="/" element={<PitchCard />} />

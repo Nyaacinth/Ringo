@@ -11,8 +11,7 @@ lerna-debug.log*
 node_modules
 
 # Generated files
-dist
-src-tauri/target
+# dist -- Enable GitHub Pages
 
 # System caches
 .DS_Store

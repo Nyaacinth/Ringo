@@ -11,10 +11,9 @@
             }
         },
         {
-            "label": "Build Tauri Application",
+            "label": "Build Web Statics",
             "type": "npm",
-            "script": "build:tauri",
-            "group": "build"
+            "script": "build:vite"
         }
     ]
 }
