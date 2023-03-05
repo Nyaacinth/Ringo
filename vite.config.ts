@@ -12,7 +12,8 @@ export default defineConfig({
     },
     clearScreen: false,
     build: {
-        target: ["es2021", "chrome105", "safari13"]
+        target: ["es2021", "chrome105", "safari13"],
+        outDir: "docs"
     },
     plugins: [
         Solid(),
