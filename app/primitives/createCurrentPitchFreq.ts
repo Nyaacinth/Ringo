@@ -20,7 +20,7 @@ export function createCurrentPitchFreq(delay: number, hold: boolean) {
     const [pitch, setPitch] = createSignal<number | null>(261.626)
 
     createEffect(() => {
-        let intervalId: number | undefined
+        let intervalId: number | NodeJS.Timer | undefined
         let mediaStreamSource: MediaStreamAudioSourceNode | undefined
         let mediaStream: MediaStream | undefined
 
